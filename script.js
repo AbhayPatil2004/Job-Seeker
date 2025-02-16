@@ -82,4 +82,22 @@ document.addEventListener("DOMContentLoaded" , function(){
     rightArrowBtn.addEventListener("click", rightArrowFunction);
 
     
+    // let darkModeBtn = document.querySelector(".DarkMode");
+    // let darkModeCount = 0 ;
+
+    // function changeColor(){
+
+    //     if( darkModeCount % 2 == 0 ){
+    //         document.body.style.backgroundColor = "black";
+    //         darkModeBtn.style.justifyContent = "end" ;
+    //     }
+    //     else{
+    //         document.body.style.backgroundColor = "white";
+    //         darkModeBtn.style.justifyContent = "start" ;
+    //     }
+
+    //     darkModeCount += 1 ;
+    // }
+    // darkModeBtn.addEventListener("click" , changeColor );
+
 })
