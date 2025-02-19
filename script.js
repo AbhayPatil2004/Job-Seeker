@@ -100,4 +100,46 @@ document.addEventListener("DOMContentLoaded" , function(){
     // }
     // darkModeBtn.addEventListener("click" , changeColor );
 
+    let searchArray = ["frontend devloper" , "backend devloper" , "devops engineer" , "data analytist" , "cyber security" , "fullstack devloper" , "ui/ux designer" , "react devloper" ];
+
+    let userInput = document.querySelector(".input");
+    let searchOptionDiv = document.querySelector(".searchOption");
+
+    
+    function userOptions(event) {
+        let userValue = event.target.value.toLowerCase().trim();
+    
+        searchOptionDiv.innerHTML = "";
+    
+        if (userValue === "") {
+            searchOptionDiv.style.display = "none";
+            return;
+        }
+    
+        let found = false;
+    
+        for (let i = 0; i < searchArray.length; i++) {
+            if (searchArray[i].toLowerCase().includes(userValue)) {
+                
+                let anchorTag = document.createElement("a");
+                anchorTag.href = "jobs.html";
+                anchorTag.innerText = searchArray[i];
+                anchorTag.classList.add("search-item"); 
+                searchOptionDiv.appendChild(anchorTag);
+                found = true;
+            }
+        }
+        
+        if( found ){
+            searchOptionDiv.style.display = "flex" ;
+        }
+        else{
+            searchOptionDiv.style.display = "none" ;
+        }
+    }
+
+
+    userInput.addEventListener("input" , userOptions );
+
+
 })
