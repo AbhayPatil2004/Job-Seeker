@@ -1,7 +1,23 @@
+
+
 *{
     margin: 0px;
     padding: 0px;
 }
+
+
+
+.listItem >li > a:hover{
+    color: var(--voilet-color);
+}
+
+:root{
+    --voilet-color : rgb(87, 1, 186);
+    --red-color : rgb(179, 7, 7) ;
+    --blue-color :  rgb(64, 0, 255);
+    --light-grey-color : rgb(232, 232, 232);
+}
+
 .header{
     width: 90vw;
     margin: auto;
@@ -111,4 +127,64 @@
         margin: 0px 50px 0px 0px ;
     }
     
+}
+
+.Information{
+
+    width: 75vw;
+    margin: 100px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+
+    & > div{
+        padding: 10px 0px 10px 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px black;
+
+    }
+}
+
+.PersonalInformation{
+    & > p{
+        color: var(--voilet-color);
+        font-size: 1.5rem;
+    }
+}
+.jobInfo{
+    & > p{
+        color: var(--voilet-color);
+        font-size: 1.5rem;
+    }
+}
+.education{
+    & > p{
+        color: var(--voilet-color);
+        font-size: 1.5rem;
+    }
+}
+.experience{
+    & > p{
+        color: var(--voilet-color);
+        font-size: 1.5rem;
+    }
+}
+.skills{
+    & > p{
+        color: var(--voilet-color);
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:500px){
+
+    .Information{
+        margin: 25px;
+    }
 }

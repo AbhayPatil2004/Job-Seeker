@@ -2,6 +2,13 @@
     margin: 0px;
     padding: 0px;
 }
+:root{
+    --voilet-color : rgb(87, 1, 186);
+    --red-color : rgb(179, 7, 7) ;
+    --blue-color :  rgb(64, 0, 255);
+    --light-grey-color : rgb(232, 232, 232);
+}
+
 .header{
     width: 90vw;
     margin: auto;
@@ -52,6 +59,10 @@
 }
 .profilepng , .profile{
     width: 4rem;
+}
+
+.listItem >li > a:hover{
+    color: var(--voilet-color);
 }
 
 @media (max-width:600px){

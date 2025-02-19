@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded" , function(){
 
+    // Home Page
+
     let count = 0 ;
     let viewfeatureBtn = document.querySelector(".viewfeature");
 
@@ -16,8 +18,9 @@ document.addEventListener("DOMContentLoaded" , function(){
         count ++ ;
     }
     viewfeatureBtn.addEventListener( "click" , afterviewfeatureBtnClick );
-
-
+    
+    
+    let searchArray = ["frontend devloper" , "backend devloper" , "devops engineer" , "data analytist" , "cyber security" , "fullstack devloper" , "ui/ux designer" , "react devloper" ];
     let leftArrowBtn = document.querySelector(".leftArrow");
     let rightArrowBtn = document.querySelector(".rightArrow");
 
@@ -100,7 +103,6 @@ document.addEventListener("DOMContentLoaded" , function(){
     // }
     // darkModeBtn.addEventListener("click" , changeColor );
 
-    let searchArray = ["frontend devloper" , "backend devloper" , "devops engineer" , "data analytist" , "cyber security" , "fullstack devloper" , "ui/ux designer" , "react devloper" ];
 
     let userInput = document.querySelector(".input");
     let searchOptionDiv = document.querySelector(".searchOption");
@@ -142,4 +144,11 @@ document.addEventListener("DOMContentLoaded" , function(){
     userInput.addEventListener("input" , userOptions );
 
 
+    // Profile Page 
+
+    let Profile = document.querySelector(".profile");
+    Profile.addEventListener("click" , function(){
+        window.location.href = "profile.html";
+    })
+    
 })
