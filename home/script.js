@@ -20,7 +20,10 @@ document.addEventListener("DOMContentLoaded" , function(){
     viewfeatureBtn.addEventListener( "click" , afterviewfeatureBtnClick );
     
     
-    let searchArray = ["frontend devloper" , "backend devloper" , "devops engineer" , "data analytist" , "cyber security" , "fullstack devloper" , "ui/ux designer" , "react devloper" ];
+    let searchArray = ["frontend devloper" , "backend devloper" , "devops engineer" , "data analytist" , "cyber security" , "fullstack devloper" , "ui/ux designer" , "react devloper" ,
+        "Mobile App Developer" , "Data Scientist" , "Machine Learning Engineer" , "Ethical Hacker" , "Blockchain Developer"
+    
+    ];
     let leftArrowBtn = document.querySelector(".leftArrow");
     let rightArrowBtn = document.querySelector(".rightArrow");
 
