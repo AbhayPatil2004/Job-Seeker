@@ -67,4 +67,57 @@ document.addEventListener("DOMContentLoaded", function(){
             locations.textContent += UserDataArray[i].locations;
         }
     }
+
+
+    let jobBtn = document.querySelector(".jobBtn");
+    let eduBtn = document.querySelector(".eduBtn");
+    let expeBtn = document.querySelector(".expeBtn");
+    let skillBtn = document.querySelector(".skillBtn");
+    let boolJob = true ;
+    let boolExpe = true ;
+    let boolEdu = true ;
+    let boolSkill = true ;
+
+    jobBtn.addEventListener("click" , function(){
+        if( boolJob ){
+            document.querySelector(".jobInfo").style.display = "block" ;
+            boolJob = false ;
+        }
+        else{
+            document.querySelector(".jobInfo").style.display = "none" ;
+            boolJob = true ;
+        }
+    })
+
+    eduBtn.addEventListener("click", function(){
+        if( boolEdu ){
+            document.querySelector(".education").style.display = "block" ;
+            boolEdu = false ;
+        }
+        else{
+            document.querySelector(".education").style.display = "none" ;
+            boolEdu = true ;
+        }
+    })
+    expeBtn.addEventListener("click", function(){
+        if( boolExpe ){
+            document.querySelector(".experience").style.display = "block" ;
+            boolExpe = false ;
+        }
+        else{
+            document.querySelector(".experience").style.display = "none" ;
+            boolExpe = true ;
+        }
+    })
+    skillBtn.addEventListener("click", function(){
+        if( boolSkill ){
+            document.querySelector(".skills").style.display = "block" ;
+            boolSkill = false ;
+        }
+        else{
+            document.querySelector(".skills").style.display = "none" ;
+            boolSkill = true ;
+        }
+    })
+
 })
