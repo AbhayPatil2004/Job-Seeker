@@ -127,4 +127,141 @@
     
 }
 
+/* body{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+} */
 /* Header Colpleted */
+.header2{
+
+    width: 90%;
+    padding: 25px 0px 0px 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h1{
+        color: var(--red-color);
+        text-shadow: 2px 2px 5px white;
+    }
+
+    & > .btns{
+        
+        max-height: fit-content;
+        display: flex;
+        /* flex-direction: column; */
+        gap: 20px;
+
+        & > .LogIn{
+            /* height: fit-content; */
+            background-color: black;
+            padding:5px 10px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            & > a{
+                color: white;
+                text-decoration: none;
+            }
+            
+        }
+
+        & > .SignIn{
+            /* height: fit-content; */
+            background-color: var(--voilet-color);
+            padding:5px 10px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            & > a{
+                color: white;
+                text-decoration: none;
+            }
+            
+        }
+
+    }
+}
+
+.container{
+    background-color: white;
+    width: 80vw;
+    margin: 25px auto;
+    display: grid;
+    grid-template-areas: 
+    "SelfInfo JobInfo "
+    "Education Experience "
+    "Skills Skills"
+    ;
+    /* padding: 50px; */
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px black;
+    row-gap: 15px;
+    column-gap: 10px;
+    border-radius: 1rem;
+
+    & > div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 5px;
+        justify-self: left;
+        align-self: flex-start;
+        /* border: 1px solid var(--blue-color); */
+        /* padding: 10px; */
+
+
+        & > h2{
+            padding: 10px 10px;
+            color: var(--blue-color);
+        }
+
+        & > input{
+            width: 90%;
+            border-radius: 0.3rem;
+            border: 1px solid black;
+            /* cursor: pointer; */
+        }
+        
+        & > select{
+            font-size: 0.8rem;
+            width: 90% ;
+            border-radius: 0.3rem;
+            cursor: pointer;
+        }
+    }
+
+}
+.jobInfo{
+    gap: 5px;
+}
+
+.btn{
+    width: 95vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 50px 0px;
+}
+.Submit{
+
+    font-size: 1rem;
+    width: 75%;
+    padding: 5px 0px;
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    cursor: pointer;
+
+}
+
+@media( max-width:500px){
+    .container{
+        width: 90%;
+        padding: 25px 10px;
+    }
+}

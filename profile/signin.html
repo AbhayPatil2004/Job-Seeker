@@ -8,8 +8,11 @@
 </head>
 <body>
     
+
+
     <header class="header">
-        
+    
+
         <div class="titlelogo">
             <img class="logopng" src="C:\Users\WIJN10\Desktop\Job Seeker\Assets\job-logo-design-job-search-icon-with-magnifying-glass-choose-people-for-hire-symbol-job-or-employee-logo-vector.png" alt="">
             <div class="title">
@@ -36,40 +39,115 @@
 
     <!-- Sign In Information -->
 
+    <div class="header2">
+        <h1>Sign In</h1>
+        <div class="btns">
+            <button class="LogIn">
+                <a href="login.html">LogIn</a>
+            </button>
+            <button class="SignIn">
+                <a href="signin.html">SignIn</a>
+            </button>
+        </div>
+    </div>
+    
     <div class="container">
-        <div class="selfInfo">
-            <label for="name"></label>
+
+        
+        <div class="selfInfo" id="SelfInfo">
+            <h2>Self Information</h2>
+            <label for="name">Enter Your Name</label>
             <input type="text" id="name">
-            <label for="phone"></label>
+            <label for="phone"> Phone Number</label>
             <input type="text" id="phone">
-            <label for="email"></label>
+            <label for="email"> Email Id</label>
             <input type="text" id="email">
-            <label for="linkedIn"></label>
+            <label for="linkedIn"> LinkedIn Link</label>
             <input type="text" id="linkedIn">
-            <label for="gitHub"></label>
+            <label for="gitHub"> GitHub Link</label>
             <input type="text" id="gitHub">
         </div>
 
-        <div class="jobInfo">
-            <label for="jobTitel"></label>
-            <input type="text" id="jobTitle">
-            <label for="jobTime"></label>
-            <input type="text" id="jobTime">
-            <label for="jobLocation"></label>
+        <div class="jobInfo" id="JobInfo">
+            <h2>Job Information</h2>
+            <label for="jobTitel"> Job Type</label>
+            <select name="" id="jobTitel">
+                <option value="Fullstack Devloper">Fullstack Devloper</option>
+                <option value="BackEnd Devloper">BackEnd Devloper</option>
+                <option value="FrontEnd Devloper">FrontEnd Devloper</option>
+                <option value="Devops Engineer">Devops Engineer</option>
+                <option value="Data Analysits">Data Analysits</option>
+                <option value="cyber Security">cyber Security</option>
+                <option value="React Devloper">React Devloper</option>
+                <option value="Ethical Hacker">Ethical Hacker</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+                <option value="AI Engineer">AI Engineer</option>
+                <option value="Machine Learning Emgineer">Machine Learning Emgineer</option>
+            </select>
+            <label for="jobType">Select job Type</label>
+            <select name="" id="jobType">
+                <option value="FullTime">FullTime</option>
+                <option value="Workfrom Home">Workfrom Home</option>
+                <option value="HalfTime">HalfTime</option>
+                <option value="Day">Day</option>
+                <option value="Night">Night</option>
+            </select>
+            <label for="jobLocation"> job Location</label>
             <input type="text" id="jobLocation">
-            <label for="salary"></label>
-            <input type="text" id="salary">
+            <label for="salary"> Expected Salary</label>
+            <select name="" id="salary">
+                <option value="4Lpa">4Lpa</option>
+                <option value="10Lpa">10Lpa</option>
+                <option value="25Lpa">25Lpa</option>
+                <option value="25Lpa+">25Lpa+</option>
+            </select>
         </div>
-        <div class="education">
 
+        <div class="education" id="Education">
+            <h2>Education</h2>
+            <label for="degree">Select your Degree</label>
+            <select name="" id="degree">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Tecnology">Information Tecnology</option>
+                <option value="AIDS">AIDS</option>
+                <option value="ENTC">ENTC</option>
+                <option value="Machanical Engineering">Machanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>\
+                <option value="BCA">BCA</option>
+            </select>
+            <label for="twelth"> 12th % </label>
+            <input type="text" id="twelth">
+            <label for="tenth"> 10th %</label>
+            <input type="text" id="tenth">
         </div>
-        <div class="experience">
 
+        <div class="experience" id="Experience">
+            <h2>Experience</h2>
+            <label for="prevJob">Previous job</label>
+            <input type="text" id="prevJob">
+            <label for="companyName">Previous Company Name</label>
+            <input type="text" id="companyName">
+            <label for="duration">Select Duration</label>
+            <select name="" id="duration">
+                <option value="0Years">0Years</option>
+                <option value="2Years">2Years</option>
+                <option value="5Years">5Years</option>
+                <option value="10Years">10Years</option>
+            </select>
         </div>
-        <div class="skills">
 
+        <div class="skills" id="Skills">
+            <h2>Skills</h2>
+            <label for="techSkills">Technical Skills</label>
+            <input type="text" id="techSkills">
+            <label for="techSkills">Soft Skills</label>
+            <input type="text" id="softSkills">
         </div>
     </div>
 
+    
+    <div class="btn">
+        <button class="Submit">Submit</button>
+    </div>
 </body>
 </html>
