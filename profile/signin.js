@@ -1,47 +1,51 @@
-document.addEventListener("DOMContentLoaded",function(){
 
-    let userData = {
+document.addEventListener("DOMContentLoaded" , function(){
 
-        name : "",
-        phone : "",
-        email : "",
-        linkedIn : "",
-        gitHub : "",
-        job : "" ,
-        jobType : "",
-        location : "",
-        salary : "" ,
-        degree : "" ,
-        twelth : "" ,
-        tenth : "" ,
-        prevJob : "" ,
-        company : "" ,
-        duration : "" ,
-        tech : "",
-        soft : "" ,
+    let submitBtn = document.querySelector(".Submit");
+    let userData = {};
+
+    function addData(element){
+
+        for( let i = 0 ; i < element.children.length ; i++ ){
+
+            if( element.children[i].tagName == "INPUT" || element.children[i].tagName == "SELECT" ){
+                let elementId = element.children[i].id ;
+                
+                if( !element.children[i].value ){
+                    alert(`Please fill the ${elementId} Infomation`);
+                    return false ;
+                }
+                else{
+                    userData[elementId] = element.children[i].value ;
+                    console.log(userData[elementId]);
+                }
+            }
+        }
+        return true ;
     }
 
-    let btn = document.querySelector(".Submit");
+    submitBtn.addEventListener("click" , function(event){
 
-    btn.addEventListener("click" , function(){
-
-        let selfInfo = document.querySelector(".selfInfo");
-        for( let i = 0 ; i < selfInfo.children.length ; i++ ){
-            if( selfInfo.children[i].tagName === "INPUT" ){
-
-                let elementId = selfInfo.children[i].id ;
-                if (userData.hasOwnProperty(elementId)) {
-                    userData[elementId] = selfInfo.children[i].value;
-                }
-                
+        let allFilled = true;
+        let container = document.querySelector(".container");
+        for( let i = 0 ; i < container.children.length ; i++ ){
+            let element = container.children[i];
+            if( !addData(element) ){
+                allFilled = false ;
+                break ;
             }
         }
 
-        console.log(userData.name);
-        console.log(userData.phone);
-        console.log(userData.email);
-        console.log(userData.linkedIn);
-        console.log(userData.gitHub);
+        if (!allFilled) {
+            event.preventDefault(); 
+            console.log("Form submission prevented due to empty fields.");
+        }
+        else{
+            let email = userData.email ;
+            localStorage.setItem( email , JSON.stringify(userData));
+            let data = localStorage.getItem(email);
+            console.log(JSON.parse(data));
+        }
+        
     })
-    
 })

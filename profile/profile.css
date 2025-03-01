@@ -129,6 +129,62 @@
     
 }
 
+/* Header 2 */
+
+.header2{
+
+    width: 90%;
+    padding: 25px 0px 0px 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h1{
+        color: var(--red-color);
+        text-shadow: 2px 2px 5px white;
+    }
+
+    & > .btns{
+        
+        max-height: fit-content;
+        display: flex;
+        /* flex-direction: column; */
+        gap: 20px;
+
+        & > .LogIn{
+            /* height: fit-content; */
+            background-color: black;
+            padding:5px 10px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            & > a{
+                color: white;
+                text-decoration: none;
+            }
+            
+        }
+
+        & > .SignIn{
+            /* height: fit-content; */
+            background-color: var(--voilet-color);
+            padding:5px 10px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            & > a{
+                color: white;
+                text-decoration: none;
+            }
+            
+        }
+
+    }
+}
+
+
+/* Information */
+
+
 .Information{
     /* background-color: rgb(239, 239, 239); */
     max-width: 800px;
