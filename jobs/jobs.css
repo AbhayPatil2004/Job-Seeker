@@ -124,3 +124,440 @@
     }
     
 }
+
+.findJob{
+    display: flex;
+    /* width: fit-content; */
+    max-width: 800px;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 25px 10px 25px;
+    /* background-color: rgb(132, 132, 245); */
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* width: 75%; */
+
+    & > .heading{
+        font-size: 1.2rem;
+        color: var(--voilet-color);
+
+        & > .h2{
+            color: black;
+        }
+    }
+
+    
+    @keyframes move {
+
+        from{
+            transform: translateX(-100%);
+            opacity: 0.5;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    & > .searchInfo{
+        font-size: 0.9rem;
+    }
+
+    & > .search{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 10PX;
+
+        & > .searchJob{
+            /* padding: 2px; */
+            border-radius: 0.7rem;
+            border: none;
+            background-color: var(--light-grey-color);
+            border: 1px solid black;
+            width: 75%;
+            /* padding: 10px 5px ; */
+            height: 25px;
+            padding-left: 10px;
+        }
+    
+        & > .searchBtn{
+            padding: 2px 5px;
+            background-color: rgb(64, 64, 248);
+            border-radius: 0.3rem;
+            color: white;
+            font-weight: 100;
+            font-size: 0.7rem;
+            cursor: pointer;
+
+        }
+    }
+}
+
+@media ( max-width :450px ){
+
+    .findJob{
+        flex-direction: column;
+        max-width: 400px;
+    }
+    .searchJob{
+        width: 60%;
+    }
+    
+}
+ .heading{
+    animation: move 2s ease-in-out 0s 1 forwards; 
+}
+
+ @keyframes move {
+
+    from{
+        transform: translateX(-100%);
+        opacity: 0.5;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+} 
+
+.webInfo{
+    display: flex;
+    /* max-width: 800px; */
+    width: 75%;
+    margin: auto;
+    justify-content: space-evenly;
+
+    & > .webInfos{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        /* border: 1px solid black; */
+        border-radius: 0.5rem;
+        padding: 5px;
+
+        & > img{
+            width: 35px;
+        }
+
+        & > div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.h3{
+    color: blue;
+}
+
+@media (max-width:450px){
+
+    .webInfo{
+        width: 95%;
+
+        & > .webInfos{
+            & > img{
+                width: 25px;
+            }
+        }
+      
+    }
+
+    .h3{
+        font-size: 15px;
+    }
+    .p{
+        font-size: 10px;
+    }
+}
+
+/* Latest jobs */
+
+.LatestJobs{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin: 50px 25px ;
+    font-size: 1.5rem;
+    gap: 15px;
+    
+}
+.Latest{
+    color: var(--voilet-color);
+}
+
+@media( max-width :650px ){
+    .LatestJobs{
+        font-size: 1rem;
+    }
+}
+@media( max-width :450px ){
+    .LatestJobs{
+        font-size: 0.5rem;
+        gap: 5px;
+        margin: 25px 10px;
+    }
+}
+
+.JobsInfo{
+    width: 95vw;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "Job1 Job2 Job3 Job4"
+    "Job5 Job6 Job7 Job8"
+    ;
+    gap: 10px;
+    transition: all 2s ease-in-out 1s;
+    cursor: pointer;
+
+
+}
+.JobsInfo :hover{
+    transform: scale(1.02);
+}
+@media (max-width:1000px){
+
+    .JobsInfo{
+        grid-template-areas: 
+        "Job1 Job2 Job3 "
+        "Job4 Job5 Job6 "
+        "Job7 Job8 ."
+        ;
+    }
+}
+@media (max-width:750px){
+
+    .JobsInfo{
+        grid-template-areas: 
+        "Job1 Job2 "
+        "Job3 Job4 "
+        "Job5 Job6 "
+        "Job7 Job8"
+        ;
+    }
+}
+@media (max-width:450px){
+
+    .JobsInfo{
+        grid-template-areas: 
+        "Job1 "
+        "Job2 "
+        "Job3 "
+        "Job4 "
+        "Job5" 
+        "Job6 "
+        "Job7 "
+        "Job8"
+        ;
+    }
+}
+
+.job{
+
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 0.3rem;
+    padding: 10px 5px 0px 5px ;
+    box-shadow: 2px 2px 5px black;
+
+    & > h2{
+        font-size: 1.2rem;
+    }
+    & > P{
+        font-size: 1rem;
+    }
+
+    & > .btnBox{
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    & > .btnBox > button{
+        font-size: 0.8rem;
+        padding: 5px 10px ;
+        background-color: white;
+        border-radius: 1rem;
+    }    
+}
+.positionBtn{
+    color: var(--voilet-color);
+}
+.jobBtn{
+    color: var(--red-color);
+}
+.lpaBtn{
+    color: var(--blue-color);
+}
+
+/* Latest jobs Completed */
+
+/* JOBS */
+
+.selectJob{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+.filterJob{
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    row-gap: 25px;
+
+    & > div{
+        display: flex;
+        flex-direction: column;
+
+        & > h3{
+            color: var(--blue-color);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.JOBS{
+    display: grid;
+    grid-template-areas: 
+    "Job1 Job2 Job3 "
+    "Job4 Job5 Job6 "
+    "Job7 Job8 Job8 "
+    ;
+
+    & > .JOB{
+
+        border: 1px solid black;
+        margin: 10px;
+        border-radius: 1rem;
+        padding: 5px 15px;
+        box-shadow: 2px 2px 5px black;
+
+        & > .titleLogo{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+
+            & > img{
+                height: 50px;
+                width: 100px;
+            }
+            & > div{
+                & > h3{
+                    color: var(--red-color);
+                }
+            }
+        }
+
+        & > h2{
+            color: var(--voilet-color);
+            padding: 5px 0px;
+        }
+        & > p{
+            padding: 5px 0px 10px 0px;
+        }
+    }
+}
+
+
+@media( max-width :800px ){
+
+    .JOBS{
+        
+        grid-template-areas: 
+        "Job1 Job2"
+        "Job3 Job4"
+        "Job5 Job6"
+        "Job7 Job8"
+        
+        ;
+    }
+}
+
+@media( max-width :450px ){
+
+    .selectJob{
+        width: 95%;
+        margin: auto;
+        flex-direction: column;
+    }
+    .filterJob{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .JOBS{
+        
+        grid-template-areas: 
+        "Job1"
+        "Job2"
+        "Job3"
+        "Job4"
+        "Job5"
+        "Job6"
+        "Job7"
+        "Job8"
+        ;
+    }
+}
+
+.buttonBox1{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.buttonBox1 button:nth-child(1){
+    padding: 5px;
+    color: var(--red-color);
+    border-radius: 0.5rem;
+}
+.buttonBox1 button:nth-child(2){
+    padding: 5px;
+    color: var(--voilet-color);
+    border-radius: 0.5rem;
+}
+.buttonBox1 button:nth-child(3){
+    padding: 5px;
+    color: var(--blue-color);
+    border-radius: 0.5rem;
+}
+
+.details{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px 15px 0px;
+    & > button{
+        width: 90%;
+        margin: auto;
+        padding: 5px;
+        border-radius: 1rem;
+        color: rgb(0, 0, 0);
+        background-color: rgb(219, 219, 219);
+        cursor: pointer;
+        font-size: 1.1rem;
+        font: bolder;
+    }
+    
+}
