@@ -278,13 +278,88 @@
     }
 }
 
+/* our Recruiter */
+.recruiter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    overflow-x: hidden;
+
+    .heading{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-left: 25px;
+
+        & > .heading1{
+            color: var(--red-color);
+            font-size: 3rem;
+        }
+        & > .heading2{
+            font-size: 3rem;
+        }
+    }
+
+    & > .companies{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        column-gap: 25px;
+        cursor: pointer;
+        animation: moving 10s linear 0s infinite alternate;
+        /* transform: rotateY('360deg'); */
+        & > a {
+            & > img{
+                width: 100px;
+            }
+        }
+    }
+}
+
+@keyframes moving {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(100px);
+    }
+}
+
+@media( max-width:450px )
+{
+    .recruiter{
+        
+        & > .heading{
+            padding-left: 10px;
+            & > .heading1{
+                color: var(--red-color);
+                font-size: 2rem;
+            }
+            & > .heading2{
+                font-size: 2rem;
+            }
+        }
+
+        & > .companies{
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            column-gap: 20px;
+        }
+    }
+
+}
 /* Latest jobs */
 
 .LatestJobs{
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    margin: 50px 25px ;
+    margin: 0px 25px 50px 25px ;
     font-size: 1.5rem;
     gap: 15px;
     
@@ -346,6 +421,14 @@
 }
 @media (max-width:450px){
 
+    .LatestJobs{
+        .Latest{
+            font-size: 1.7rem;
+        }
+        .Job{
+            font-size: 1.7rem;
+        }
+    }
     .JobsInfo{
         grid-template-areas: 
         "Job1 "
@@ -504,6 +587,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        padding-left: 0px;
     }
     .JOBS{
         
