@@ -65,9 +65,55 @@ document.addEventListener("DOMContentLoaded" , function(){
 
     userInput.addEventListener("input" , userOptions );
 
-    // Details
-
+    // Details  
+    let jobObj = {
+        companyName : "" ,
+        job : "" ,
+        description : "" ,
+        position : "" ,
+        salary : "" ,
+        time : ""
+    }
+    // Latest And top Job Openings
     let jobs = document.querySelector(".JobsInfo");
+    // jobs Section
+    let Jobs = document.querySelector(".JOBS");
+    Jobs.addEventListener("click" , function(event){
+        
+        let child = event.target ;
+        // console.log(child);
+        let parent = child.parentElement ;
+        classList = parent.classList ;
+
+        while( classList[0] != "JOB" ){
+            parent = parent.parentElement ;
+            classList = parent.classList ;
+        }
+
+        console.log(parent);
+
+        let companyName = parent.querySelector("h3");
+        let job = parent.querySelector("h2");
+        let description = parent.querySelectorAll("p");
+        let btnArr = parent.querySelectorAll("button");
+        let position = btnArr[0];
+        let time = btnArr[1];
+        let salary = btnArr[2] ;
+
+        jobObj.companyName = companyName.innerText ;
+        jobObj.job = job.innerText ;
+        jobObj.description = description[1].innerText ;
+        jobObj.position = position.innerText ;
+        jobObj.time = time.innerText ;
+        jobObj.salary = salary.innerText ;
+
+        console.log(jobObj);
+
+        localStorage.setItem("currentJob" , JSON.stringify(jobObj));
+        let currentJob = localStorage.getItem("currentJob");
+        console.log( JSON.parse(currentJob));
+        window.location.href = "details.html";
+    })
 
     jobs.addEventListener("click", function(event){
         let child = event.target ;
@@ -75,14 +121,6 @@ document.addEventListener("DOMContentLoaded" , function(){
         // console.log(parent.innerHTML);
 
         // window.location.href = "details.html";
-        
-        let jobObj = {
-            companyName : "" ,
-            job : "" ,
-            description : "" ,
-            position : "" ,
-            salary : "" 
-        }
 
         let companyNameAndJob = parent.querySelectorAll('h2');
         let description = parent.querySelectorAll("p");
