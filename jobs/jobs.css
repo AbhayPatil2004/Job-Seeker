@@ -187,12 +187,12 @@
         }
     
         & > .searchBtn{
-            padding: 2px 5px;
+            padding: 5px 5px;
             background-color: rgb(64, 64, 248);
             border-radius: 0.3rem;
             color: white;
             font-weight: 100;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             cursor: pointer;
 
         }

@@ -77,11 +77,12 @@ document.addEventListener("DOMContentLoaded" , function(){
     // Latest And top Job Openings
     let jobs = document.querySelector(".JobsInfo");
     // jobs Section
-    let Jobs = document.querySelector(".JOBS");
+    let Jobs = document.querySelector(".JoBs");
+
     Jobs.addEventListener("click" , function(event){
         
         let child = event.target ;
-        // console.log(child);
+        console.log(child);
         let parent = child.parentElement ;
         classList = parent.classList ;
 
@@ -141,5 +142,17 @@ document.addEventListener("DOMContentLoaded" , function(){
         window.location.href = "details.html";
 
     })
+
+    let searchBTN = document.querySelector(".searchBtn");
+
+    searchBTN.addEventListener("click", function () {
+    let input = document.querySelector(".searchJob");
+
+    localStorage.setItem("SearchResult" , JSON.stringify(input.value.trim().toLowerCase()));
+
+    console.log(JSON.parse(localStorage.getItem("SearchResult")));
+    window.location.href = "../search/search.html";
+
+    });
 
 })

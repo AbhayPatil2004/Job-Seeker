@@ -288,6 +288,7 @@
     padding: 10px;
     border-radius: 1rem;
     background-color: white;
+    cursor: pointer;
 
     & > a{
         text-decoration: none;
@@ -297,6 +298,9 @@
     & > a:hover{
         color: var(--red-color);
     }
+}
+.role > button:hover{
+    color: var(--red-color);
 }
 
 .leftArrow ,.rightArrow{
@@ -932,5 +936,12 @@
         max-width: 880px;
         margin: auto;
         font-size: 0.8rem;
+    }
+}
+.social{
+    & > .logo{
+        & > img{
+            width: 50px;
+        }
     }
 }

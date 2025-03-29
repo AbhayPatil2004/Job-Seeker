@@ -59,8 +59,8 @@
                 A job search webpage helps job seekers find employment opportunities by listing job openings from various companies
             </p>
             <div class="search">
-                <input type="text" class="searchJob" placeholder="job title , keyword">
-                <button class="searchBtn">Find Job</button>
+                <input type="text" class="searchJob" placeholder="Job title / Company name">
+                <button class="searchBtn">Search</button>
             </div>
             <div class="searchOption"></div>
         </div>
@@ -160,7 +160,7 @@
     </div>
 
 
-    <div class="JobsInfo">
+    <div class="JobsInfo JOBS">
 
         <div class="job job1" id="Job1">
 
@@ -287,22 +287,22 @@
                 <h3>Locations</h3>
 
                 <div>
-                    <input type="radio" id="mumbai">
+                    <input type="radio" id="mumbai" name="select">
                     <label for="mumbai">Mumbai</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="pune">
+                    <input type="radio" id="pune" name="select">
                     <label for="pune">Pune</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="nashik">
+                    <input type="radio" id="nashik" name="select">
                     <label for="nashik">Nashik</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="banglore">
+                    <input type="radio" id="banglore" name="select">
                     <label for="banglore">Banglore</label>
                 </div>
 
@@ -313,27 +313,27 @@
                 <h3>Industry</h3>
 
                 <div>    
-                    <input type="radio" id="Front">
+                    <input type="radio" id="Front" name="select">
                     <label for="Front">Front Developer</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="BackEnd">
+                    <input type="radio" id="BackEnd" name="select">
                     <label for="BackEnd">BackEnd Developer</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="Devops">
+                    <input type="radio" id="Devops" name="select">
                     <label for="Devops">Devops Engineer</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="FullStack">
+                    <input type="radio" id="FullStack" name="select">
                     <label for="FullStack">FullStack Developer</label>
                 </div>
                 
                <div>
-                   <input type="radio" id="Data">
+                   <input type="radio" id="Data" name="select">
                 <label for="Data">Data Analysist</label>
                </div>
 
@@ -343,24 +343,24 @@
                 
                 <h3>Salary</h3>
                 <div>
-                    <input type="radio" id="4Lpa+">
+                    <input type="radio" id="4Lpa+" name="select">
                     <label for="4Lpa+">4Lpa+</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="8Lpa+">
+                    <input type="radio" id="8Lpa+" name="select">
                     <label for="8Lpa+">8Lpa+</label>
                 </div>
                 
                 <div>
-                    <input type="radio" id="12Lpa">
+                    <input type="radio" id="12Lpa" name="select">
                     <label for="12Lpa">12Lpa</label>
                 </div>
             </div>
         </div>
 
         
-        <div class="JOBS">
+        <div class="JOBS JoBs">
 
             <!-- job1 -->
             <div class="JOB JOB1" id="Job1">
@@ -571,6 +571,9 @@
 
      </div>
 
-    <script src="jobs.js"></script>
+    <script src="jobs.js" defer ></script>
+    <script src="../search/search.js" defer></script>
+    <!-- <script src="../home/home.js" defer ></script> -->
+
 </body>  
 </html>
