@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     let search = JSON.parse(localStorage.getItem("SearchResult"));
     console.log(search);
+
     if( search == "" ){
         Searchresult.innerHTML = "<h2> We are sorry, but at the moment there are no jobs for this position or no job openings in this company. </h2>"
         return ;
     }
+ 
 
     try {
         // Fetch HTML content of jobs.html
@@ -33,18 +35,24 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(JobsInfo.innerHTML);
 
         for (let i = 0; i < JobsInfo.children.length; i++) {
-            let jobDetails = JobsInfo.children[i].querySelectorAll("h2");
+            
+            if( search == "mumbai" || search == "pune" || search == "nashik" || search == "banglore" ){
+                Searchresult.appendChild(JobsInfo.children[i].cloneNode(true));
+            }
+            else{
+                let jobDetails = JobsInfo.children[i].querySelectorAll("h2");
 
-            if (jobDetails.length < 2) continue;
+                if (jobDetails.length < 2) continue;
 
-            let job = jobDetails[1].innerText.trim().toLowerCase();
-            let company = jobDetails[0].innerText.trim().toLowerCase();
+                let job = jobDetails[1].innerText.trim().toLowerCase();
+                let company = jobDetails[0].innerText.trim().toLowerCase();
 
-            if (job == search || company == search 
-                || job.includes(search) || company.includes(search)
-                || job.startsWith(search) || company.startsWith(search)
-            ) {
-                Searchresult.appendChild(JobsInfo.children[i].cloneNode(true)); // Clone and append
+                if (job == search || company == search 
+                    || job.includes(search) || company.includes(search)
+                    || job.startsWith(search) || company.startsWith(search)
+                ) {
+                    Searchresult.appendChild(JobsInfo.children[i].cloneNode(true)); // Clone and append
+                }
             }
         }
 

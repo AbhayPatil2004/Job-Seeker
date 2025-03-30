@@ -155,4 +155,19 @@ document.addEventListener("DOMContentLoaded" , function(){
 
     });
 
+    // select options
+    console.log("Hello World");
+
+    let filterJob = document.querySelector(".filterJob");
+    filterJob.addEventListener("click",function(event){
+        // console.log(event.target.innerText);
+
+        if( event.target.innerText != "" ){
+            localStorage.setItem("SearchResult" , JSON.stringify(event.target.innerText.trim().toLowerCase()));
+            console.log(event.target.innerText);
+            window.location.href = "../search/search.html";
+        }
+        
+    })
+
 })
