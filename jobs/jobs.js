@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded" , function(){
 
     // SearchSujjestion
 
-    let searchArray = ["frontend devloper" , "backend devloper" , "devops engineer" , "data analytist" , "cyber security" , "fullstack devloper" , "ui/ux designer" , "react devloper" ,
-        "Mobile App Developer" , "Data Scientist" , "Machine Learning Engineer" , "Ethical Hacker" , "Blockchain Developer"
+    let searchArray = ["frontend developer" , "backend developer" , "devops engineer" , "data analytist" , "cyber security" , "fullstack developer" , "ui/ux designer" , "react developer" ,
+        "Mobile App Developer" , "Data Scientist" , "Machine Learning Engineer" , "Ethical Hacker" , "Blockchain Developer" , "google" , "microsoft" , "amazon" , "adobe" , "paypal" , "phonepay" , "tcs" , "infosys" , "capgemini" , "accenture" , "linkedin" , "nvdia" , "jobseekr" , "cognizant" , "tech mahindra" , "wipro" , "zomato" 
     
     ];
 
@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded" , function(){
         for (let i = 0; i < searchArray.length; i++) {
             if (searchArray[i].toLowerCase().includes(userValue)) {
                 
-                let anchorTag = document.createElement("a");
-                anchorTag.href = "jobs.html";
+                let anchorTag = document.createElement("p");
+                // anchorTag.href = "jobs.html";
                 anchorTag.innerText = searchArray[i];
                 anchorTag.classList.add("search-item"); 
                 searchOptionDiv.appendChild(anchorTag);
@@ -64,6 +64,16 @@ document.addEventListener("DOMContentLoaded" , function(){
 
 
     userInput.addEventListener("input" , userOptions );
+
+    searchOptionDiv.addEventListener("click",function(event){
+
+        let input = event.target.innerText.trim().toLowerCase() ;
+
+        localStorage.setItem("SearchResult" , JSON.stringify(input));
+
+        console.log(JSON.parse(localStorage.getItem("SearchResult")));
+        window.location.href = "../search/search.html";
+    })
 
     // Details  
     let jobObj = {

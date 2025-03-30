@@ -258,6 +258,8 @@
 }
 .search-item{
     cursor: pointer;
+    color: var(--voilet-color);
+    text-decoration: underline;
 }
 
 

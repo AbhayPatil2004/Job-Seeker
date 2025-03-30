@@ -649,8 +649,14 @@
 .searchOption{
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
-
+.search-item{
+    cursor: pointer;
+    color: var(--voilet-color);
+    text-decoration: underline;
+    /* margin-top: 5px; */
+}
 
 /* Footer section */
 
