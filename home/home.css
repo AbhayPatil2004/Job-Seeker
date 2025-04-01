@@ -9,6 +9,7 @@
     --light-grey-color : rgb(232, 232, 232);
 }
 
+
 .header{
     width: 90vw;
     margin: auto;
@@ -16,6 +17,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* position: sticky;
+    top: 0px;
+    background-color: white; */
+    
 }
 .titlelogo{
     display: flex;

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded" , function(){
         let featureItems = document.querySelector(".clickfeature");
         if( count % 2 == 0 ){
             featureItems.style.display = "flex" ;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         else{
             featureItems.style.display = "none" ;

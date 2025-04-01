@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded" , function(){
         let featureItems = document.querySelector(".clickfeature");
         if( count % 2 == 0 ){
             featureItems.style.display = "flex" ;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         else{
             featureItems.style.display = "none" ;
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded" , function(){
         "Mobile App Developer" , "Data Scientist" , "Machine Learning Engineer" , "Ethical Hacker" , "Blockchain Developer" , "google" , "microsoft" , "amazon" , "adobe" , "paypal" , "phonepay" , "tcs" , "infosys" , "capgemini" , "accenture" , "linkedin" , "nvdia" , "jobseekr" , "cognizant" , "tech mahindra" , "wipro" , "zomato" 
     
     ];
+    
     let leftArrowBtn = document.querySelector(".leftArrow");
     let rightArrowBtn = document.querySelector(".rightArrow");
 

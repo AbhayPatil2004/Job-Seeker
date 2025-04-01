@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    overflow-x: hidden;
+}
 
 :root{
     --voilet-color : rgb(87, 1, 186);
@@ -229,7 +232,7 @@
 .webInfo{
     display: flex;
     /* max-width: 800px; */
-    width: 75%;
+    width: 95%;
     margin: auto;
     justify-content: space-evenly;
 
@@ -306,10 +309,11 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         overflow-x: hidden;
         column-gap: 25px;
         cursor: pointer;
-        animation: moving 10s linear 0s infinite alternate;
+        /* animation: moving 10s linear 0s infinite alternate; */
         /* transform: rotateY('360deg'); */
         & > a {
             & > img{
